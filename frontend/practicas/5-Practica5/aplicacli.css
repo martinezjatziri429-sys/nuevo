@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.search-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#city-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #71b1a6;
+    font-size: 16px;
+    width: 70%;
+    max-width: 300px;
+    outline: none;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #004d40;
+}
+
+.weather-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #b2dfdb;
+    margin-bottom: 20px;
+}
+
+.current-weather h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#current-temp {
+    font-size: 4em;
+    margin: 0;
+    font-weight: bold;
+}
+
+#current-desc {
+    text-transform: capitalize;
+    font-size: 1.2em;
+}
+
+.forecast-container h3 {
+    margin-top: 0;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.forecast-card {
+    background-color: #71b1a6;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card p {
+    margin: 5px 0;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-top: 15px;
+}
+/* --- ESTILO PARA EL BOTÓN DE REGRESAR AL MENÚ --- */
+.btn-volver {
+    display: inline-block; /* Permite aplicar padding y otros estilos */
+    padding: 12px 25px; /* Botón grande y cómodo */
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white; /* Color del texto */
+    background-color: #48bc31; /* Azul vibrante */
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    border-radius: 8px;
+    margin: 0 12px; /* Margen para separarlo de los otros botones */
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para profundidad */
+}
+
+.btn-volver:hover {
+    background-color: #09f10d; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de "levantar" */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,405 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: #333;
+    background-color: #5663a3;
+}
+
+header {
+    background: #9aa3d0;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #5663a3; /* Un color vibrante para el logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #6C63FF;
+    transform: translateY(-2px);
+}
+
+/* Sección Hero */
+.hero {
+    /* Imagen de fondo relacionada con notificaciones o tecnología discreta */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('tatu.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background: #6C63FF; /* Color principal de la marca */
+    color: #fff;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+}
+
+.btn:hover {
+    transform: scale(1.05) translateY(-3px);
+    background: #5a51d9;
+    box-shadow: 0 6px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* Sección de Características */
+.features {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #5663a3;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.features h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #6C63FF;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.feature-grid {
+    display: grid; /* Usamos Grid para mayor control */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background: #fdfdfd;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid #eee;
+}
+
+.feature-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item h3 {
+    font-size: 1.7rem;
+    color: #6C63FF;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 1.05rem;
+    color: #666;
+}
+
+/* Sección de Contacto */
+.contact-form {
+    background: #f0f2f5;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+#contactForm {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input, .form-group textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #6C63FF;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none; /* Oculto por defecto */
+}
+
+#submitBtn {
+    width: 100%;
+    padding: 16px;
+    background: #6C63FF;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+}
+
+#submitBtn:hover {
+    background: #5a51d9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* Footer */
+footer {
+    background: #395276;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* Animaciones y Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para el Confeti */
+.confetti {
+    position: fixed; /* Ocupa toda la pantalla */
+    top: -10px; /* Empieza un poco por encima del viewport */
+    width: 10px; /* Tamaño del confeti */
+    height: 10px;
+    background-color: red; /* Se sobrescribirá por JS */
+    border-radius: 50%; /* Para que sean círculos, o puedes usar 0 para cuadrados */
+    animation-name: confetti-fall;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    opacity: 0; /* Empieza invisible y el keyframe lo hará visible */
+}
+
+@keyframes confetti-fall {
+    0% { transform: translateY(-10vh) rotateZ(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(100vh) rotateZ(720deg); opacity: 0; }
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fija el modal en el viewport */
+    z-index: 2000; /* Por encima de todo, incluido el confeti */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); /* Fondo semi-transparente oscuro */
+    display: flex; /* Para centrar el contenido */
+    align-items: center;
+    justify-content: center;
+    animation: fadeInModal 0.3s ease-out;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: center;
+    animation: scaleIn 0.3s ease-out;
+}
+
+.modal-content p {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #6C63FF;
+    text-decoration: none;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Design (Media Queries) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
+        gap: 15px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .features h2, .contact-form h2 {
+        font-size: 2rem;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+    .feature-item {
+        padding: 30px;
+    }
+    #contactForm {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+    .modal-content p {
+        font-size: 1.1rem;
+    }
+}
+/* --- ESTILO PARA EL BOTÓN DE REGRESAR AL MENÚ --- */
+.btn-volver {
+    display: inline-block; /* Permite aplicar padding y otros estilos */
+    padding: 12px 25px; /* Botón grande y cómodo */
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white; /* Color del texto */
+    background-color: #48bc31; /* Azul vibrante */
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    border-radius: 8px;
+    margin: 0 12px; /* Margen para separarlo de los otros botones */
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para profundidad */
+}
+
+.btn-volver:hover {
+    background-color: #09f10d; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de "levantar" */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Juego de Memoria</title>
+ <link rel="stylesheet" href="juegmen.css">
+</head>
+<body>
+ <a href="/" class="btn-volver">REGRESAR AL MENU</a>
+ <main class="main-container">
+ <h1>Juego de Memoria de Frutas</h1>
+
+ <div class="header">
+ <div class="time-container">
+ Tiempo: <span id="time-display">0s</span> / 50s
+ </div>
+ <div class="attempts-container">
+ Intentos: <span id="attempts-display">0</span>
+ </div>
+ </div>
+
+ <div class="game-board" id="game-board">
+ </div>
+
+ <div class="modal-start" id="modal-start">
+ <div class="modal-content-start">
+ <h2>¡Desafía a tu mente!</h2>
+ <p>Encuentra todas las parejas de frutas antes de que el tiempo se agote. ¡Que comience el reto!</p>
+ <button id="start-game">¡Empezar a Jugar!</button>
+ </div>
+ </div>
+
+ <div class="modal" id="modal-end" style="display:none;">
+ <div class="modal-content">
+ <p class="end-message" id="end-message"></p>
+ <button class="accept-button" id="restart-game">Aceptar</button>
+ </div>
+ </div>
+
+ </main>
+
+ <script src="juegomen.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+body {
+ font-family: Arial, sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ margin: 0;
+ background-color: #7d9ab4;
+}
+
+.main-container {
+ text-align: center;
+ background: rgba(143, 224, 214, 0.6);
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+ color: #333;
+}
+
+.header {
+ display: flex;
+ justify-content: space-around;
+ margin-bottom: 20px;
+ font-size: 1.2em;
+}
+
+.game-board {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 10px;
+ width: 400px;
+ height: 400px;
+ perspective: 1000px;
+}
+
+.card {
+ width: 100%;
+ height: 100%;
+ position: relative;
+ transform-style: preserve-3d;
+ transition: transform 0.5s;
+ cursor: pointer;
+}
+
+.card.flipped {
+ transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ backface-visibility: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 2em;
+ border-radius: 8px;
+}
+
+.card-front {
+ background-color: #73a5c7;
+ color: white;
+ transform: rotateY(180deg);
+ font-size: 2.5em;
+}
+
+.card-back {
+ background-color: #ccc;
+ border: 2px solid #aaa;
+}
+
+/* Estilos del modal de inicio */
+.modal-start {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.7);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.modal-content-start {
+ background-color: white;
+ padding: 30px;
+ border-radius: 10px;
+ text-align: center;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content-start h2 {
+ color: #73a5c7;
+ font-size: 2em;
+}
+
+.modal-content-start p {
+ color: #555;
+ font-size: 1.2em;
+}
+
+#start-game {
+ background-color: #73a5c7;
+ color: white;
+ border: none;
+ padding: 15px 30px;
+ font-size: 1.2em;
+ border-radius: 5px;
+ cursor: pointer;
+ margin-top: 20px;
+}
+
+/* Estilos del nuevo modal de fin de juego */
+.modal {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ z-index: 1000;
+}
+
+.modal-content {
+ background-color: #73a5c7;
+ color: #eee;
+ padding: 40px;
+ border-radius: 8px;
+ text-align: center;
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+ max-width: 400px;
+ width: 90%;
+}
+
+.end-message {
+ font-size: 1.5em;
+ margin-bottom: 20px;
+}
+
+.accept-button {
+ background-color: #007BFF;
+ color: white;
+ border: none;
+ padding: 12px 25px;
+ font-size: 1em;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background-color 0.3s;
+}
+
+.accept-button:hover {
+ background-color: #0056b3;
+}
+/* --- ESTILO PARA EL BOTÓN DE REGRESAR AL MENÚ --- */
+.btn-volver {
+    display: inline-block; /* Permite aplicar padding y otros estilos */
+    padding: 12px 25px; /* Botón grande y cómodo */
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white; /* Color del texto */
+    background-color: #48bc31; /* Azul vibrante */
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    border-radius: 8px;
+    margin: 0 12px; /* Margen para separarlo de los otros botones */
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para profundidad */
+}
+
+.btn-volver:hover {
+    background-color: #09f10d; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de "levantar" */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

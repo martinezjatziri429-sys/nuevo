@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #699d95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card-container {
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #094530;;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-photo:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+h2 {
+    color: #333333;
+    margin-top: 15px;
+}
+
+h3 {
+    color: #094530;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.description {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #094530;;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #094530;;
+}
+
+.contact-hidden {
+    display: none;
+}
+
+.contact-info {
+    margin-top: 15px;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* --- ESTILO PARA EL BOTÓN DE REGRESAR AL MENÚ --- */
+.btn-volver {
+    display: inline-block; /* Permite aplicar padding y otros estilos */
+    padding: 12px 25px; /* Botón grande y cómodo */
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white; /* Color del texto */
+    background-color: #48bc31; /* Azul vibrante */
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    border-radius: 8px;
+    margin: 0 12px; /* Margen para separarlo de los otros botones */
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para profundidad */
+}
+
+.btn-volver:hover {
+    background-color: #09f10d; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de "levantar" */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

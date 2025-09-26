@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima de la Ciudad</title>
+    <link rel="stylesheet" href="aplicacli.css">
+</head>
+<body>
+    <a href="/" class="btn-volver">REGRESAR AL MENU</a>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Ingresa una ciudad">
+            <button id="search-btn">Buscar</button>
+        </div>
+
+        <div class="weather-card current-weather">
+            <h2 id="city-name"></h2>
+            <p id="current-temp"></p>
+            <p id="current-desc"></p>
+            <img id="weather-icon" src="climaima.jpg" alt="" width="250">
+        </div>
+
+        <div class="forecast-container">
+            <h3>Pronóstico de 5 días</h3>
+            <div id="forecast-cards" class="forecast-grid">
+                </div>
+        </div>
+    </div>
+    
+    <script src="aplicacli.js"></script>
+</body>
+</html>

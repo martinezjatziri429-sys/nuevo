@@ -1,0 +1,277 @@
+/* --- ESTILOS GENERALES Y FONDO DE PÁGINA --- */
+body {
+    background-image: url('FONDO.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #e0f7fa;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* --- CONTENEDOR PRINCIPAL DEL JUEGO --- */
+.game-container {
+    text-align: center;
+    background-color: #fff8e1; /* Nuevo color crema/beige */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 850px;
+    width: 90%;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- TÍTULO --- */
+h1 {
+    color: #ff6f00;
+    font-size: 3.5em;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+    font-family: 'Impact', 'Comic Sans MS', cursive;
+}
+
+/* --- CANVAS DEL JUEGO --- */
+canvas {
+    background-color: transparent;
+    border-bottom: 6px solid #8bc34a;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 20px auto;
+    box-shadow: inset 0 -3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- INTERFAZ DE USUARIO (Puntuación e Info) --- */
+#gameUI {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f4c3;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#score {
+    font-size: 1.8em;
+    color: #4CAF50;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#info-text {
+    font-size: 1.3em;
+    color: #795548;
+    font-style: italic;
+}
+
+/* --- CONTROLES (Botones) --- */
+.controls {
+    margin-top: 25px;
+}
+
+.controls button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin: 0 12px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#newGameBtn {
+    background-color: #8bc34a;
+    color: white;
+}
+
+#newGameBtn:hover {
+    background-color: #689f38;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#clearScoresBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+#clearScoresBtn:hover {
+    background-color: #d32f2f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- TABLA DE PUNTUACIONES --- */
+#leaderboard {
+    margin-top: 40px;
+    text-align: left;
+}
+
+#leaderboard h2 {
+    color: #2196f3;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fffde7; /* Nuevo color para la tabla */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#leaderboard th, #leaderboard td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#leaderboard thead {
+    background-color: #bbdefb;
+    color: #333;
+}
+
+#leaderboard tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+#leaderboard tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+/* --- PANTALLA DE INGRESO DE NOMBRE (Fin del Juego) --- */
+#nameInputScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.name-input-box {
+    background-color: #fff8e1;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    max-width: 90%;
+    animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.7); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.name-input-box h2 {
+    color: #ff5722;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.name-input-box p {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#playerNameInput {
+    width: 80%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 2px solid #90caf9;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#playerNameInput::placeholder {
+    color: #aaa;
+}
+
+#submitNameBtn {
+    background-color: #42a5f5;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#submitNameBtn:hover {
+    background-color: #2196f3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Responsive Design (para pantallas más pequeñas) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    .game-container {
+        padding: 20px;
+    }
+    #gameUI {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .controls button {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+/* --- ESTILO PARA EL BOTÓN DE REGRESAR AL MENÚ --- */
+.btn-volver {
+    display: inline-block; /* Permite aplicar padding y otros estilos */
+    padding: 12px 25px; /* Botón grande y cómodo */
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white; /* Color del texto */
+    background-color: #0e5152; /* Azul vibrante */
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    border-radius: 8px;
+    margin: 0 12px; /* Margen para separarlo de los otros botones */
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para profundidad */
+}
+
+.btn-volver:hover {
+    background-color: #0d2360; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de "levantar" */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chavo Runner</title>
+    <link rel="stylesheet" href="dinoproy.css">
+</head>
+<body>
+       <a href="/" class="btn-volver">REGRESAR AL MENU</a>
+    <div class="game-container">
+        <h1>Chavo Runner</h1>
+        <canvas id="gameCanvas" width="800" height="200"></canvas>
+        <div id="gameUI">
+            <div id="score">Puntuación: 0</div>
+            <div id="info-text">Presiona ESPACIO para saltar.</div>
+        </div>
+        <div class="controls">
+            <button id="newGameBtn">Nueva Partida</button>
+            <button id="clearScoresBtn">Borrar Puntuaciones</button>
+        </div>
+        <div id="leaderboard">
+            <h2>Puntuaciones</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Partida</th>
+                        <th>Nombre</th>
+                        <th>Puntuación</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody id="scoreTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="nameInputScreen" class="hidden">
+        <div class="name-input-box">
+            <h2>¡Fin del juego!</h2>
+            <p>Ingresa tu nombre:</p>
+            <input type="text" id="playerNameInput" placeholder="Tu nombre aquí">
+            <button id="submitNameBtn">Aceptar</button>
+        </div>
+    </div>
+    
+    <script src="dinoproy.js"></script>
+</body>
+</html>
